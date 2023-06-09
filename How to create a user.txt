@@ -1,0 +1,22 @@
+mysql> CREATE DATABASE `mibd`;
+
+mysql> CREATE USER 'miusuario'@localhost IDENTIFIED BY 'mipassword';
+
+mysql> CREATE USER 'miusuario'@localhost IDENTIFIED BY 'mipassword';
+
+mysql> GRANT USAGE ON *.* TO 'miusuario'@localhost IDENTIFIED BY 'mipassword';
+
+mysql> GRANT USAGE ON *.* TO 'miusuario'@'%' IDENTIFIED BY 'mipassword';
+
+mysql> GRANT ALL privileges ON `mibd`.* TO 'miusuario'@localhost IDENTIFIED BY 'mipassword';
+
+mysql> FLUSH PRIVILEGES;
+
+mysql> SHOW GRANTS FOR 'miusuario'@localhost;     
++--------------------------------------------------------------+ 
+| Grants for miusuario@localhost                                | 
++--------------------------------------------------------------+ 
+| GRANT USAGE ON *.* TO 'miusuario'@'localhost'                 | 
+| GRANT ALL PRIVILEGES ON `mibd`.* TO 'miusuario'@'localhost' | 
++--------------------------------------------------------------+ 
+2 rows in set (0,00 sec)
